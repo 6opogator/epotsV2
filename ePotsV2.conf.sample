@@ -1,0 +1,62 @@
+# bot config file
+
+# Server and encoding
+ server irc.servername.com  CP1251
+#port 6667
+ssl
+port 6668
+
+# uncomment to disable flood protection
+#i_can_flood
+
+# fine-tune flood protection, default 10/120
+flood_delay 2
+flood_cps 500
+
+# Nickname of bot
+nick ePots
+
+# alternative names - detecting myself mentioned in channel
+alias поц
+
+# username as in nick!username@host.address
+user pots
+
+# ircname
+ircname Electronic Pots
+
+# pass for nickserv
+nickserv_pass super_secret_pass
+
+# uncomment to enable debug mode (all events logged)
+#debug
+
+# channels for bot to join
+channel #potschannel password
+#channel #name [key] [+setmodes param...] [-resetmodes param...]
+#channel #chan1 +msntb *!root@* -lkp
+#channel #chan2 +t -lkspm
+#channel #chan3 +is -m
+# this one with +k 1 and will set +k 1
+#channel #chan4 1 +smntk 1 -pl
+
+# plugins are called in this order, watch for triggers order here
+# all plugins should be in ePotsV2:: namespace
+# asks for op
+plugin Asker
+# collects topics and says when asked
+plugin Topicster
+# tells random jokes on random triggers
+plugin Jokester
+# tells hebrew dates and holydays
+plugin HebrewCalendar
+# tells what reason to drink is today
+plugin Toaster
+# get weather from openweathermap.com
+plugin Weather
+# quiz listens for ALL public messages, put it last
+plugin Quiz
+#
+plugin HowLong
+#
+plugin Translit

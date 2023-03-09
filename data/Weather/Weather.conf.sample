@@ -1,0 +1,4 @@
+baseurl http://api.openweathermap.org/data/2.5
+apikey <here goes api key>
+# database is hard-coded, not used
+database weather.db
